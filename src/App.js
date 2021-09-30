@@ -1,25 +1,20 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import WhiteKey from "./components/WhiteKey";
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    return (
+        <div className="App">
+            <div className="keyboard">
+                <WhiteKey note={"C"} />
+                <WhiteKey note={"D"} />
+                <WhiteKey note={"E"} />
+                <WhiteKey note={"F"} />
+                <WhiteKey note={"G"} />
+                <WhiteKey note={"A"} />
+                <WhiteKey note={"B"} />
+            </div>
+        </div>
+    );
 }
 
 export default App;
