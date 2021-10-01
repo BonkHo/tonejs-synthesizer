@@ -1,26 +1,31 @@
 import React from "react";
-import BlackKey from "./components/BlackKey";
-import WhiteKey from "./components/WhiteKey";
+import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+import Home from "./pages/Home";
 
 function App() {
     return (
-        <div className="App">
-            <header>Keyboard</header>
-            <div className="keyboard">
-                <WhiteKey note={"C"} />
-                <BlackKey note={"C#"} />
-                <WhiteKey note={"D"} />
-                <BlackKey note={"D#"} />
-                <WhiteKey note={"E"} />
-                <WhiteKey note={"F"} />
-                <BlackKey note={"F#"} />
-                <WhiteKey note={"G"} />
-                <BlackKey note={"G#"} />
-                <WhiteKey note={"A"} />
-                <BlackKey note={"A#"} />
-                <WhiteKey note={"B"} />
+        <Router>
+            <div>
+                <nav>
+                    <ul>
+                        <li>
+                            <Link to="/">Home</Link>
+                        </li>
+                        <li>
+                            <Link to="/about">About</Link>
+                        </li>
+                        <li>
+                            <Link to="/users">Users</Link>
+                        </li>
+                    </ul>
+                </nav>
+                <Switch>
+                    <Route path="/">
+                        <Home />
+                    </Route>
+                </Switch>
             </div>
-        </div>
+        </Router>
     );
 }
 
