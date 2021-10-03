@@ -5,23 +5,46 @@
 }
 header {
     text-align: center;
+    font-size: 2em;
 }
-.keyboard {
+/* NavBar */
+.navlink-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+}
+/* HomePage */
+.keyboard-container {
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    width: 80vw;
+    padding: 1em;
+}
+
+.keyboard {
+    width: 100vw;
+}
+
+.volume-control-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
 }
 
 .white-key {
     width: 10%;
-    height: 20vh;
+    height: 15vh;
+    font-size: 0.75em;
 }
 
 .black-key {
     color: white;
     background: black;
     width: 6%;
-    height: 20vh;
+    height: 15vh;
+    font-size: 0.75em;
 }
